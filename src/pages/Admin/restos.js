@@ -200,8 +200,7 @@ const Dashboard = () => {
                  
                   </div>
 
-                  {/* Modal component */}
-                  {/* Modal component */}
+             
 
 
                   <section id="team" className="team" style={{ backgroundColor: 'whitesmoke',marginTop:'-2cm' }}>

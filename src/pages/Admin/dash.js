@@ -287,10 +287,10 @@ const renderActivationButton = (userId, userStatus) => {
                       <th scope="row">{index + 1}</th>
                       <td>
                       {user.image && user.image !== 'null' ? (
-                                            <img src={user.image} className="img-fluid" alt="" style={{ borderRadius: '10px', marginBottom: '0.5cm', width: '11cm' }}  />
+                                            <img src={user.image} className="img-fluid" alt="" style={{ borderRadius: '10px', marginBottom: '0.3cm', width: '2cm' }}  />
 
                                         ) : (
-                                            <img src="/assets/img/images (3).png" className="img-fluid" alt="Default Image" style={{ borderRadius: '10px', marginBottom: '0.5cm', width: '9cm' }}/>
+                                            <img src="/assets/img/images (3).png" className="img-fluid" alt="Default Image" style={{ borderRadius: '10px', marginBottom: '0.3cm', width: '2cm' }}/>
 
                                         )}
                         

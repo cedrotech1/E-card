@@ -85,6 +85,7 @@ const LandingPage = () => {
               <li>
                 <a href="login" style={sidebarStyles}>Login</a>
               </li>
+              
             </ul>
           </nav>
 
