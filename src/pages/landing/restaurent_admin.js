@@ -88,6 +88,7 @@ const LandingPage = () => {
               style={{ boxShadow: '', padding: '0.3cm' }}
             >
               <form onSubmit={handleSubmit} className="myform">
+              <h1 style={{ boxShadow: '',fontSize:'27px', paddingBottom: '0.5cm',backgroundColor:'whitesmoke',textAlign:'left',padding:'0.3cm'}}>Register as Restaurent Admin</h1>
               <div className="row" style={{ paddingTop: '0cm' }}>
                   <div className="col-md-6 form-group">
                     <span>First name</span>

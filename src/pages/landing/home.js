@@ -6,11 +6,11 @@ import Footer from '../../components/footer';
 
 const styles = {
   hero: {
-    height: '',
+    height: '90vh',
     marginTop:'2.3cm'
   },
   heading: {
-    // marginTop: '-5cm',
+    marginTop: '0.5cm',
     fontFamily: 'monospace',
   },
   paragraph: {
@@ -21,7 +21,7 @@ const styles = {
     textAlign: 'justify',
   },
   buttonContainer: {
-    marginTop: '1cm',
+    marginTop: '0.6cm',
   },
   getStartedButton: {
     backgroundColor: '',
