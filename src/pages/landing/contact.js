@@ -32,7 +32,7 @@ const LandingPage = () => {
                   </i>
                   <div>
                     <h4>Location:</h4>
-                    <p>University of rwanda, kiste group 4</p>
+                    <p>UTB university student, home kicukiro center! </p>
                   </div>
                 </div>
 
@@ -41,7 +41,7 @@ const LandingPage = () => {
 
                   <div>
                     <h4>Email:</h4>
-                    <p>kiste@gmail.com</p>
+                    <p>shemalain@gmail.com</p>
                   </div>
                 </div>
 
@@ -50,7 +50,7 @@ const LandingPage = () => {
 
                   <div>
                     <h4>Call:</h4>
-                    <p>+250 0787877666</p>
+                    <p>+250 0783 945 908</p>
                   </div>
                 </div>
 
@@ -58,14 +58,19 @@ const LandingPage = () => {
 
                   <div>
                     {/* <div id="my-map-canvas" style={{ height: '100%', width: '100%', maxWidth: '100%' }}> */}
-                    <iframe style={{ height: '100%', width: '100%', border: '0' }} frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=UR+College+of+Science+and+Technology,+KN+7+Avenue,+Kigali,+Rwanda&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                    <iframe style={{ height: '100%', width: '100%', border: '0' }} frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=UTB&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
                     {/* </div> */}
                   </div>
                 </div>
               </div>
 </div>
 
-       
+{/* <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;">
+  <div id="gmap-canvas" style="height:100%; width:100%;max-width:100%;">
+    <iframe style="height:100%;width:100%;border:0;" frameborder="0"
+     src=""></iframe></div><a class="our-googlemap-code" href="https://www.bootstrapskins.com/themes" id="get-map-data">premium bootstrap themes</a><style>#gmap-canvas img{max-height:none;max-width:none!important;background:none!important;}</style></div>
+
+        */}
 
             <div className="col-lg-8">
               <form action="" method="post" role="form" className="myform">

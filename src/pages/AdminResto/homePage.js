@@ -402,7 +402,7 @@ const Dashboard = () => {
                     <div className={`col-md-10 ${show ? 'content-shift' : ''}`}>
 
                       <section id="team" className="team teamb" >
-                        <div className="container" data-aos="fade-up" style={{ marginLeft: '-0.2cm' }}>
+                        <div className="container" data-aos="fade-up" style={{ marginLeft: '-0.2cm',marginTop:'-1cm' }}>
 
                           <div className="row">
                             <Statistics />
@@ -410,7 +410,7 @@ const Dashboard = () => {
                         </div>
                       </section>
 
-                      <div className="row" style={{ backgroundColor: 'whitesmoke' }}>
+                      <div className="row" style={{ backgroundColor: 'whitesmoke',marginTop:'-1cm'  }}>
                         <div className="col-xl-4 col-md-4" style={{ padding: '0.4cm' }}>
                           <input
                             placeholder='Filter here...'
@@ -436,7 +436,7 @@ const Dashboard = () => {
                           />
                         </div>
                         <div className="col-xl-4 col-md-4" style={{ paddingRight: '0.4cm' }}>
-                          <h4 style={{ textAlign: 'justify', paddingBottom: '0cm', color: 'gray', paddingLeft: '0.4cm' }}>LIST OF OUR EMPLOYEES </h4>
+                          <h4 style={{ textAlign: 'justify', paddingBottom: '0cm',paddingTop: '-1cm', color: 'gray', paddingLeft: '0.4cm' }}>LIST OF OUR EMPLOYEES </h4>
 
                         </div>
                         <div className="col-xl-4 col-md-4" style={{ padding: '0.4cm' }}>

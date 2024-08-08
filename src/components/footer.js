@@ -22,8 +22,12 @@ const LandingPage = () => {
         </div>
         <div className="col-lg-4 order-1 order-lg-2 text-center text-lg-right d-flex justify-content-center justify-content-lg-end">
           <ul>
-            <li>Tel: 0787877666</li>
-            <li>Instagram: group 4</li>
+          <li> 
+  <a href="tel:+0783945908">0783 945 908</a>
+</li>
+
+            <li>Shema Alain Voltaire</li>
+            <li>Owner and developer </li>
           </ul>
         </div>
       </div>

@@ -69,7 +69,7 @@ const LandingPage = () => {
       >
         <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
           <a href="/" className="logo d-flex align-items-center">
-            <img src="assets/img/log.png" className="img-fluid mylogo" alt="" data-aos="zoom-out" data-aos-delay="100" style={{height:'3cm'}}/>
+            <img src="assets/img/LOGO.png" className="img-fluid mylogo" alt="" data-aos="zoom-out" data-aos-delay="100" style={{height:'3cm'}}/>
           </a>
           <nav id="navbar" className="navbar">
             <ul>

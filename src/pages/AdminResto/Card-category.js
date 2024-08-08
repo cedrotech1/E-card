@@ -331,7 +331,7 @@ const Dashboard = () => {
                       />
                     </div>
                     <div className="col-xl-4 col-md-4" style={{ paddingRight: '0.4cm' }}>
-                      <h4 style={{ textAlign: 'justify', paddingBottom: '0cm', color: 'gray', paddingLeft: '0.4cm' }}>LIST OF OUR EMPLOYEES </h4>
+                      <h4 style={{ textAlign: 'justify', paddingBottom: '0cm', color: 'gray', paddingLeft: '0.4cm' }}>LIST OF OUR CATEGORIES </h4>
 
                     </div>
                     <div className="col-xl-4 col-md-4" style={{ padding: '0.4cm' }}>

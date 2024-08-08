@@ -99,7 +99,7 @@ const LandingPage = () => {
                 <b>LIST OF  <span className='apart' style={{color:'#f38a7a'}}>MY CARDS</span> </b>
               </h5>
               <p style={{ fontFamily: 'monospace' }}>
-                Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.
+               {/* liste of all my cards */}
               </p>
             </div>
             <div className="col-lg-6 order-1 order-lg-2">
@@ -109,7 +109,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-<section id="team" className="team" style={{marginTop:'0cm'}}>
+<section id="team" className="team" style={{marginTop:'-1.5cm'}}>
   <div className="container" data-aos="fade-up">
     <div className="row gy-4">
       {loading ? (

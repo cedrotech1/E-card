@@ -89,16 +89,16 @@ const LandingPage = () => {
               <div className="row" style={{ paddingTop: '0cm' }}>
                   <div className="col-md-6 form-group">
                     <span>First name</span>
-                    <input type="text" name="firstname" className="form-control" id="firstname" placeholder="Cedrick" onChange={handleChange} />
+                    <input type="text" name="firstname" className="form-control" id="firstname" placeholder="Shema" onChange={handleChange} />
                   </div>
                   <div className="col-md-6 form-group mt-3 mt-md-0">
                     <span>Last Name</span>
-                    <input type="text" className="form-control" name="lastname" id="lastname" placeholder="Hakuzimana" onChange={handleChange} />
+                    <input type="text" className="form-control" name="lastname" id="lastname" placeholder="Alain" onChange={handleChange} />
                   </div>
                 </div>
                 <div className="form-group mt-3">
                   <span>Email</span>
-                  <input type="text" className="form-control" name="email" id="email" placeholder="cedrick@gmail.com" onChange={handleChange} />
+                  <input type="text" className="form-control" name="email" id="email" placeholder="shemalain@gmail.com" onChange={handleChange} />
                 </div>
                 <div className="form-group mt-3">
                   <span>Phone</span>

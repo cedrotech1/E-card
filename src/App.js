@@ -11,6 +11,9 @@ import RestRegister from "./pages/landing/restaurent_admin";
 import NotFound from './pages/landing/notfound';
 import Logout from './pages/landing/logout';
 import Statistics1 from './components/statistics';
+import Reset from './pages/landing/reset';
+import Code from './pages/landing/code';
+import ResetPassword from './pages/landing/resetPassword';
 
 // Importing components from the customer pages    
 import List from "./pages/customer/reslist";
@@ -65,6 +68,9 @@ function App() {
         <Route path="/restoAdmin" element={<RestRegister />} exact={true} />
         <Route path="/logout" element={<Logout />} exact={true} />
         <Route path="/Statistics1" element={<Statistics1 />} exact={true} />
+        <Route path="/reset" element={<Reset />}/>
+        <Route path="/code/:email" element={<Code />}/>
+        <Route path="/resetPassword/:email" element={<ResetPassword />}/>
         
 
         {/* Customer Pages */}

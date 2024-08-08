@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-// import '../../css/main2.css';
 import LoadingSpinner from '../../components/loading'; 
+import { useNavigate } from 'react-router-dom';
 import Menu from '../../components/customerM';
 import Footer from '../../components/footer';
 import { BiEnvelope, BiPhone, BiMap } from 'react-icons/bi'; // Importing icons from the 'react-icons' library
-import { useNavigate } from 'react-router-dom';
+
 const LandingPage = () => {
   const navigate = useNavigate();
   const [restaurants, setRestaurants] = useState([]);
@@ -56,7 +56,7 @@ const LandingPage = () => {
                 <b>LIST OF ALL <span className='apart' style={{color:'#f38a7a'}}>RESTAURENT</span> </b>
               </h5>
               <p style={{ fontFamily: 'monospace' }}>
-                Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.
+                list of all restaurent in system, click on one and view all information of restaurent and its coresponding categories of cards
               </p>
             </div>
             <div className="col-lg-6 order-1 order-lg-2">

@@ -156,7 +156,7 @@ console.log(filteredRes)
               <i>Meal card categories</i>
             </h6>
             <p style={{ fontFamily: '',fontStyle:'italic',   textAlign:'center', marginLeft: '0cm' }}>
-            Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.
+           meal card categories for above restourent, with prices and description
             </p>
           </div>
           <div className="row gy-4">

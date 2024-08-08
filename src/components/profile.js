@@ -14,6 +14,7 @@ const LandingPage = () => {
         phone: '',
         gender: '',
         address: '',
+        image: '',
     });
     const [loading, setLoading] = useState(true);
 
@@ -30,7 +31,7 @@ const LandingPage = () => {
     const [error, setError] = useState(null);
 
     const token = localStorage.getItem('token');
-    const [selectedUser, setSelectedUser] = useState([]);
+    const [selectedUser, setSelectedUser] = useState({});
     const [ID, setID] = useState('');
     const [status, setStatus] = useState('');
     const [image, setImage] = useState('');
@@ -72,7 +73,7 @@ const LandingPage = () => {
             setLoading(false);
             setID(parsedUser.id);
             setSelectedUser(parsedUser);
-            setImage(parsedUser.image)
+            setImage(parsedUser.image);
         } else {
             console.error('User information not found in local storage');
         }
@@ -170,13 +171,11 @@ const LandingPage = () => {
     const handleSubmitProfile = async (e) => {
         e.preventDefault();
 
-
         try {
             setLoading(true);
 
             const formDataUpload = new FormData();
             formDataUpload.append('image', formDataImage.image);
-
 
             const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/users/update/${ID}`, {
                 method: 'PUT',
@@ -192,7 +191,7 @@ const LandingPage = () => {
 
                 const updatedUser = { ...selectedUser, image: res.user.image };
                 localStorage.setItem('user', JSON.stringify(updatedUser));
-                console.log(res.user.image)
+                setImage(res.user.image);
 
                 await new Promise((resolve) => setTimeout(resolve, 2000));
                 window.location.reload();
@@ -206,7 +205,6 @@ const LandingPage = () => {
             setError('Failed to update profile picture. Please try again later.');
         }
     };
-    console.log(formData.image)
 
     return (
         <>

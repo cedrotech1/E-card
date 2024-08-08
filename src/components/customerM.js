@@ -97,7 +97,7 @@ const LandingPage = () => {
       >
         <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
           <Link to="/" className="logo d-flex align-items-center">
-            <img src="/assets/img/LG.png" className="img-fluid mylogo" alt="" data-aos="zoom-out" data-aos-delay="100" />
+            <img src="/assets/img/LOGO.png" className="img-fluid mylogo" alt="" data-aos="zoom-out" data-aos-delay="100" />
           </Link>
           <nav id="navbar" className="navbar">
             <ul>

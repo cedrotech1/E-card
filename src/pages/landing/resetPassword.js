@@ -1,27 +1,31 @@
+// import './App.css';
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '../../css/main2.css';
-import LoadingSpinner from '../../components/loading'; // Import the LoadingSpinner component
+import { useNavigate,useParams,Link} from 'react-router-dom';
+// import LoadingSpinner from '../../components/loading'; 
+// import { Link, useNavigate } from 'react-router-dom';
 
-
-const LandingPage = () => {
+import 'react-toastify/dist/ReactToastify.css'
+function App() {
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(false); 
-
+  const { email } = useParams();
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    newPassword: '',
+    confirmPassword: '',
+    
   });
 
-  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      setLoading(true); 
-      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/auth/login`, {
-        method: 'POST',
+      setLoading(true);
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/v1/users/resetPassword/${email}`, {
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -33,32 +37,20 @@ const LandingPage = () => {
       if (response.ok) {
         const res = await response.json();
         toast.success(res.message);
-
-        localStorage.setItem('token', res.token);
-        localStorage.setItem('user', JSON.stringify(res.user));
-
-        const role = res.user.role;
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
-        if (role === 'customer') {
-          await navigate('../list');
-        } else if (role === 'superadmin') {
-          await navigate('../admin_dash');
-        } else if (role === 'restaurentadmin') {
-          await navigate('../resto_dash');
-        } else if (role === 'employee') {
-          await navigate('../emplyoyee_customers');
-        }
+
+          await navigate('../login');
+    
       } else {
         const errorData = await response.json();
-        setError(errorData.message);
         toast.error(errorData.message);
       }
     } catch (error) {
       console.error('Error creating account', error);
-      setError('Failed to create an account. Please try again later.');
+      toast.error('Failed to create account. Please try again later.');
     } finally {
-      setLoading(false); // Set loading to false when request is complete
+      setLoading(false);
     }
   };
 
@@ -67,14 +59,12 @@ const LandingPage = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
-    setError(null);
   };
-
 
   return (
     <>
 
-      <section id="herofm" className="herofm" style={{ marginTop: '3cm' }}>
+<section id="herofm" className="herofm" style={{ marginTop: '3cm' }}>
         <div className="container position-relative">
           <div className="row gy-5" data-aos="fade-in">
             <div className="col-lg-1 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
@@ -86,24 +76,23 @@ const LandingPage = () => {
                
                 <br/>
                 <div className="form-group mt-3">
-                  <span>Email</span>
-
-                  <input type="text" className="form-control" name="email" id="email" placeholder="alainvoltaire@gmail.com" onChange={handleChange} style={{outline: 'none'}} />
+                  <span>new password</span>
+                  <input type="password" oninput="maskPassword()" className="form-control" name="newPassword" id="subject" placeholder="************" onChange={handleChange} />
                 </div>
                 <br/>
 
                 <div className="form-group mt-3">
-                  <span>password</span>
-                  <input type="password" oninput="maskPassword()" className="form-control" name="password" id="subject" placeholder="************" onChange={handleChange} />
+                  <span>confirm password</span>
+                  <input type="password" oninput="maskPassword()" className="form-control" name="confirmPassword" id="subject" placeholder="************" onChange={handleChange} />
                 </div>
                 <div className="form-group mt-3">
-                <Link to='../reset'> <b style={{textAlign:'center',color:'red'}}>forgot password</b></Link> 
+                <Link to='../reset'> <b style={{textAlign:'center',color:'brown'}}> go back to get reset code</b></Link> 
                   {/* <input type="password" oninput="maskPassword()" className="form-control" name="password" id="subject" placeholder="************" onChange={handleChange} /> */}
                 </div>
 
                 <div className="text-center">
                 <button type="submit" style={{color:'black'}} className={`form-control ${loading ? 'loading' : ''}`} disabled={loading}>
-              {loading ? <LoadingSpinner /> : 'Login'}
+              {loading ? 'loading...' : 'Login'}
             </button>
                   </div>
               </form>
@@ -115,22 +104,13 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-
-      <br />
-
-
-
-
-
-      <a href="#" className="scroll-top d-flex align-items-center justify-content-center">
-        <i className="bi bi-arrow-up-short"></i>
-      </a>
-
-      <script src="assets/js/main.js"></script>
       <ToastContainer />
+
+
+
 
     </>
   );
-};
+}
 
-export default LandingPage;
+export default App;
